@@ -1,0 +1,20 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Let's learn abour our Europe!</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li {% if mixture.url == "index" %}class="active"{% endif %}><a href="/">Home</a></li>
+                    <li {% if mixture.url == "part1" %}class="active"{% endif %}><a href="/part1">Part 1</a></li>
+                    <li {% if mixture.url == "part2" %}class="active"{% endif %}><a href="/part2">Part 2</a></li>
+                    <li {% if mixture.url == "sources" %}class="active"{% endif %}><a href="/sources">Sources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

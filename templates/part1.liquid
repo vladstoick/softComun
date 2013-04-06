@@ -1,0 +1,35 @@
+{% block content %}
+<ul id="cuprins">
+	<br>
+	<li><button class="btn btn-large" id="1">Cities</button></li>
+	<li><button class="btn btn-large" id="2">Festival</button></li>
+	<li><button class="btn btn-large" id="3">Food</button></li>
+	<li><button class="btn btn-large" id="4">Historical landmarks</button></li>
+	<li><button class="btn btn-large" id="5">Important people</button></li>
+	<li><button class="btn btn-large" id="6">Inventors</button></li>
+	<li><button class="btn btn-large" id="7">Writers</button></li>
+	<br><br>
+</ul>
+<div id="gameContent" style="display:none">
+	<h1 id="slogan">Question time</h1>
+	<img src=""/ id="gameImg">
+	<h3 id="question"></h3>
+	<div class="row-fluid">
+		<div class="span3"><button class="btn btn-large btn btn-primary" onClick="clickedButton(1)" id="btn0">Hello World</button></div>
+		<div class="span3"><button class="btn btn-large btn btn-primary" onClick="clickedButton(2)" id="btn1">Hello World</button></div>
+		<div class="span3"><button class="btn btn-large btn btn-primary" onClick="clickedButton(3)" id="btn2">Hello World</button></div>
+		<div class="span3"><button class="btn btn-large btn btn-primary" onClick="clickedButton(4)" id="btn3">Hello World</button></div>
+	</div>
+	<h3 id="status">Wrong!Try again!</h3>
+</div>
+<div id="finishedGame" style="display:none">
+	<h1>You've finished this game</h1>
+	<br>
+	<button class="btn btn-large btn btn-primary" onClick="spawnCuprins()" id="btn3">Go back!</button>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ "array.js" | asset_url | script_tag }}
+{{ "array.js" | asset_url | script_tag }}
+<script src="public/js/part1.js"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+cities
+festival
+food
+historical landmarks
+important
+inventors
+writers

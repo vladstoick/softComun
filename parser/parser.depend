@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1365259666 source:c:\users\vlad\desktop\softcomun\parser\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+

@@ -1,0 +1,20 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "public",
+    "preprocessorScriptOutput": "public/js",
+    "preprocessorStyleOutput": "public/css",
+    "projectName": "bootstrap-demo",
+    "projectDescription": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+    "publishedId": "1993",
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "modelSource": null,
+    "domain": null
+}
