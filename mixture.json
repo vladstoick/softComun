@@ -1,0 +1,20 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "public/css/less",
+    "preprocessorScriptOutput": "public/js",
+    "preprocessorStyleOutput": "public/css",
+    "projectName": "Project Name",
+    "projectDescription": "Project Description",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "simple",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "modelSource": null,
+    "domain": null
+}
