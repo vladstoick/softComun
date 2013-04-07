@@ -1,24 +1,8 @@
-.brand {
-  font-size: 20px !important;
-}
-body {
-  font-family: Myriad Pro, sans-serif;
-  text-align: center;
-}
-body #cuprins {
-  list-style-type: none;
-}
-body #cuprins li {
-  margin: 10px;
-}
-body #cuprins li button {
-  height: 70px;
-  width: 250px;
-}
-body #gameContent #gameImg {
-  height: 350px;
-  width: auto;
-}
-body #gameContent #status {
-  color: red;
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: 'Less NameError: .pull-right is undefined in C:\\Users\\vlad\\Desktop\\softComun\\public\\css\\less\\style.less:9:2 \A 8 	{ \A 9 		.pull-right; \A 10 	} \A  \A '; }
+
+  body * {
+  	display: none;
+  }

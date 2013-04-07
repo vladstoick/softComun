@@ -5097,6 +5097,35 @@ a.badge:hover {
 .hero-unit li {
   line-height: 30px;
 }
+.brand {
+  font-size: 20px !important;
+  font-weight: bold!important;
+}
+.navbar-fixed-top .nav-collapse {
+  float: right;
+  font-size: 17px;
+}
+body {
+  font-family: Myriad Pro, sans-serif;
+  text-align: center;
+}
+body #cuprins {
+  list-style-type: none;
+}
+body #cuprins li {
+  margin: 10px;
+}
+body #cuprins li button {
+  height: 70px;
+  width: 250px;
+}
+body #gameContent #gameImg {
+  height: 350px;
+  width: auto;
+}
+body #gameContent #status {
+  color: red;
+}
 .pull-right {
   float: right;
 }
