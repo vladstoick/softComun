@@ -49,7 +49,9 @@ function updateDOM()
 {
 	var country=parseInt(objectId/5+1);
 	var imgId=objectId%5+1;
-	$("#gameImg").attr('src','public/asset/1/'+gameId+'/'+country+'/image'+imgId+'.jpeg');
+	var source='public/asset/1/'+gameId+'/'+country+'/image'+imgId+'.jpeg';
+	console.log(source);
+	$("#gameImg").attr('src',source);
 	$("#slogan").text(slogan[gameId]);
 	$("#question").text(question[gameId][objectId]);
 	$("#btn0").text(varA[gameId][objectId]);
