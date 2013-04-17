@@ -3,13 +3,25 @@ var correctAnswer=0;
 var gameId=0;
 var answered=0;
 var objectId=0;
+var noQuestions=[0,
+30,
+35,
+35,
+35,
+35,
+35,
+30,
+];
+var points=0;
+var pointToAdd=2;
 function clickedButton(id)
 {
-	console.log(id,correctAnswer);
+	console.log(pointToAdd);
 	if(id==correctAnswer)
 	{
 		$("#status").hide();
 		answered++;
+		points+=pointToAdd;
 		if(answered<30)
 		{
 			objectId=findNewId();
@@ -19,34 +31,53 @@ function clickedButton(id)
 		{
 			spawnFinished();
 		}
+		points+=pointToAdd;
+		updatePoints();
 	}
 	else
 	{
+		pointToAdd=0;
 		$("#status").show();
+		var stringcorrectAnswer='a';
+		if(correctAnswer==2)
+			stringcorrectAnswer='b';
+		if(correctAnswer==3)
+			stringcorrectAnswer='c';
+		if(correctAnswer==4)
+			stringcorrectAnswer='d';
+		$("#correctAnswer").text("The correct answer was: "+stringcorrectAnswer+"). Click on the correct answer to continue.").show();
 	}
+}
+function updatePoints()
+{
+	$("#points").text("You have "+points+"/"+noQuestions[gameId]*2+" points");
 }
 function spawnFinished()
 {
 	$("#cuprins").hide();
 	$("#gameContent").hide();
 	$("#finishedGame").show();
+	$("#correctAnswer").hide();
 }
 function spawnCuprins()
 {
 	$("#cuprins").show();
 	$("#gameContent").hide();
 	$("#finishedGame").hide();
+	$("#correctAnswer").hide();
 }
 function findNewId()
 {
-	var randomId=Math.floor(Math.random()*29);	
+	var randomId=Math.floor(Math.random()*(noQuestions[gameId]-1));	
 	while(objectAlreadyUsed[randomId]!=0)
-		randomId=Math.floor(Math.random()*29);
+		randomId=Math.floor(Math.random()*(noQuestions[gameId]-1));
 	objectAlreadyUsed[randomId]=1;
 	return parseInt(randomId);
 }
 function updateDOM()
 {
+	$("#correctAnswer").hide();
+	pointToAdd=2;
 	var country=parseInt(objectId/5+1);
 	var imgId=objectId%5+1;
 	var source='public/asset/1/'+gameId+'/'+country+'/image'+imgId+'.jpeg';
@@ -66,6 +97,8 @@ function spawn()
 	$("#gameContent").show();
 	$("#finishedGame").hide();
 	$("#status").hide();
+	$("#correctAnswer").hide();
+	updatePoints();
 	for(var i=0;i<100;i++)
 		objectAlreadyUsed[i]=0;
 	objectId=findNewId();
