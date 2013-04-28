@@ -14,7 +14,7 @@ function showModal()
 		'<video id="my_video_1" controls  preload="false" width="520" height="264" poster="my_video_poster.png"  data-setup="{}">'  +
         '<source src="public/asset/2/'+name+'.mp4" type="video/mp4"></source>' +
         '<source src="public/asset/2/'+name+'.webm" type="video/webm">'+
-        'You are using an old browser. Internet Explorer doesn\'t implement
+        'You are using an old browser. Internet Explorer doesn\'t implement'+
 		'</video>')
 
 	
