@@ -5104,6 +5104,9 @@ a.badge:hover {
 .highlight {
   background-color: red;
 }
+.modal-body {
+  max-height: 700px;
+}
 .navbar-fixed-top .nav-collapse {
   float: right;
   font-size: 17px;
@@ -5112,13 +5115,16 @@ body {
   font-family: Myriad Pro, sans-serif;
   text-align: center;
 }
-body #cuprins {
+body #cuprins,
+body #menu {
   list-style-type: none;
 }
-body #cuprins li {
+body #cuprins li,
+body #menu li {
   margin: 10px;
 }
-body #cuprins li button {
+body #cuprins li button,
+body #menu li button {
   height: 70px;
   width: 250px;
 }
