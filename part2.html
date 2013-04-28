@@ -11,6 +11,14 @@
     }
     </style>
     <link href="public/css/responsive.css" rel="stylesheet" type="text/css" media="all" />
+    <!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link href="video-js/video-js.css" rel="stylesheet">
+<script src="video-js/video.js"></script>
+<script> _V_.options.flash.swf = "video-js/video-js.swf"; </script>
+
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -51,24 +59,6 @@
             <li><button class="btn btn-large" onClick="showQuestions()">2. Test yourself now</button></li>
             <br><br>
         </ul>
-       <!--  <div id="gameContent" style="display:none">
-            <h3 id="points">You have 0/30 points</h3>
-            <h1 id="slogan">Question time</h1>
-            <img src="" id="gameImg">
-            <h3 id="question"></h3>
-            <div class="row-fluid">
-               <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(1)" id="btn0">Hello World</button></div>
-               <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(2)" id="btn1">Hello World</button></div>
-               <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(3)" id="btn2">Hello World</button></div>
-               <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(4)" id="btn3">Hello World</button></div>
-           </div>
-           <h3 id="status">Sorry, your answer was incorrect! The correct answer was highlited</h3>
-           <h3 id="correctAnswer">adad</h3>
-       </div>
-       <div id="finishedGame" style="display:none">
-        <h1>You've finished this game</h1>
-        <br>
-        <button class="btn btn-large btn btn-primary" onClick="spawnCuprins()" id="btn3">Go back!</button> -->
 
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
@@ -79,10 +69,10 @@
                 Hello World
             </div>
         </div>
+
     </div>
         <script src="public/js/jquery.js"></script>
         <script src="public/js/bootstrap.js"></script>
-
         <script src="public/js/array2.js"></script>
         <script src="public/js/part2.js"></script>
 

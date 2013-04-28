@@ -6,16 +6,17 @@ function showModal()
 	$("#myModal").modal('show');
 	$("#countryName").text(countryName[gameId]);
 	$("#videoContainer").empty();
-	for(var i=1;i<=videos[gameId];i++)
+	// for(var i=1;i<=videos[gameId];i++)
+	for(var i=1;i<=10;i++)
 	{
 		var name = '/'+gameId+'/'+i;
 		$("#videoContainer").append(
-   		 '<video width="520" height="264" controls>' +
+		'<video id="my_video_1" class="video-js vjs-default-skin" controls  preload="auto" width="520" height="264" poster="my_video_poster.png"  data-setup="{}">'  +
         '<source src="public/asset/2/'+name+'.mp4" type="video/mp4"></source>' +
-        '<object data="public/asset/2/'+name+'.mp4" width="320" height="240">'+
-    	'<embed src="public/asset/2/'+name+'.swf" width="320" height="240">'+
-  		'</object>'+
-   		 '</video>');
+        '<source src="public/asset/2/'+name+'.webm" type="video/webm">'+
+		'</video>')
+
+	
 	}
 }
 function showQuestions()
