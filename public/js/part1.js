@@ -13,6 +13,7 @@ var noQuestions=[0,
 30,
 30,
 ];
+var countryNames=["Bulgaria","Italy","Romania","Spanin","Poland","Sweden","Turkey"];
 var points=0;
 var pointToAdd=2;
 function clickedButton(id)
@@ -91,6 +92,10 @@ function updateDOM()
 	$("#btn2").text(varC[gameId][objectId]);
 	$("#btn3").text(varD[gameId][objectId]);
 	correctAnswer=answer[gameId][objectId];
+}
+function showFlag()
+{
+
 }
 function spawn()
 {
