@@ -4308,8 +4308,8 @@ input[type="submit"].btn.btn-mini {
 }
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .modal {
   position: fixed;
@@ -5100,6 +5100,9 @@ a.badge:hover {
 .brand {
   font-size: 20px !important;
   font-weight: bold!important;
+}
+#flag {
+  max-width: 500px;
 }
 .links {
   word-wrap: break-word;

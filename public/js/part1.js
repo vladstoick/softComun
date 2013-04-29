@@ -16,14 +16,23 @@ var noQuestions=[0,
 var countryNames=["Bulgaria","Italy","Romania","Spanin","Poland","Sweden","Turkey"];
 var points=0;
 var pointToAdd=2;
+function spawnModal()
+{
+	console.log(objectId);
+	$("#myModal").modal('show');
+	var source="public/flags/"+(parseInt(objectId/5)+1)+".jpeg";
+	$("#flag").attr('src',source);
+	$("#countryName").text('Congratulations! The question is from: '+countryNames[parseInt(objectId/5)]);
+}
 function clickedButton(id)
 {
-	console.log(pointToAdd);
 	if(id==correctAnswer)
 	{
 		$("#status").hide();
 		answered++;
 		points+=pointToAdd;
+		if(pointToAdd==2)
+			spawnModal(id);
 		if(answered<30)
 		{
 			objectId=findNewId();
@@ -83,7 +92,6 @@ function updateDOM()
 	var country=parseInt(objectId/5+1);
 	var imgId=objectId%5+1;
 	var source='public/asset/1/'+gameId+'/'+country+'/image'+imgId+'.jpeg';
-	console.log(source);
 	$("#gameImg").attr('src',source);
 	$("#slogan").text(slogan[gameId]);
 	$("#question").text(question[gameId][objectId]);
@@ -92,10 +100,6 @@ function updateDOM()
 	$("#btn2").text(varC[gameId][objectId]);
 	$("#btn3").text(varD[gameId][objectId]);
 	correctAnswer=answer[gameId][objectId];
-}
-function showFlag()
-{
-
 }
 function spawn()
 {
