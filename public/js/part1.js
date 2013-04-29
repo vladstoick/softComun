@@ -13,7 +13,7 @@ var noQuestions=[0,
 30,
 30,
 ];
-var countryNames=["Bulgaria","Italy","Romania","Spanin","Poland","Sweden","Turkey"];
+var countryNames=["Bulgaria","Italy","Romania","Spain","Poland","Sweden","Turkey"];
 var points=0;
 var pointToAdd=2;
 function spawnModal()
