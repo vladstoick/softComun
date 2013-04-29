@@ -7,6 +7,7 @@ var noQuestions=[0,
 30,
 35,
 35,
+35,
 30,
 30,
 30,
@@ -31,7 +32,6 @@ function clickedButton(id)
 		{
 			spawnFinished();
 		}
-		points+=pointToAdd;
 		updatePoints();
 	}
 	else
@@ -65,6 +65,7 @@ function spawnCuprins()
 	$("#gameContent").hide();
 	$("#finishedGame").hide();
 	$("#correctAnswer").hide();
+	$("#goBack").hide();
 }
 function findNewId()
 {
@@ -98,6 +99,8 @@ function spawn()
 	$("#finishedGame").hide();
 	$("#status").hide();
 	$("#correctAnswer").hide();
+	$("#goBack").show();
+	points=0;
 	updatePoints();
 	for(var i=0;i<100;i++)
 		objectAlreadyUsed[i]=0;
@@ -106,6 +109,7 @@ function spawn()
 	updateDOM();
 }
 $(document).ready(function(){
+	spawnCuprins();
 	$("#cuprins button").click(
 		function()
 		{
