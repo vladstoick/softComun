@@ -5101,6 +5101,9 @@ a.badge:hover {
   font-size: 20px !important;
   font-weight: bold!important;
 }
+.links {
+  word-wrap: break-word;
+}
 #goBack {
   margin-top: 10px;
 }
