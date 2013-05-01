@@ -102,10 +102,10 @@ function updateDOM()
 	pointToAdd=2;
 	$("#slogan").text(slogan);
 	$("#question").text(question[objectId]);
-	$("#btn0").text(varA[objectId]);
-	$("#btn1").text(varB[objectId]);
-	$("#btn2").text(varC[objectId]);
-	$("#btn3").text(varD[objectId]);
+	$("#btn0").text('a) '+varA[objectId]);
+	$("#btn1").text('b) '+varB[objectId]);
+	$("#btn2").text('b) '+varC[objectId]);
+	$("#btn3").text('d) '+varD[objectId]);
 	correctAnswer=answer[objectId];
 }
 function spawn(gameId)
