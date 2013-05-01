@@ -1,8 +1,8 @@
 var gameId;
 var points=0;
 var videos=[0,10,10,10];
-var noQuestions = [ 0 , 10,  3, 10];
-var        suma = [ 0 , 10, 13, 23];
+var noQuestions = [ 0 , 18,  3, 10];
+var        suma = [ 0 , 20, 23, 33];
 var countryName=["","Romania","Italy","Sweden"];
 var flag       =[0,3,2,6];
 var zone=0;
@@ -34,7 +34,7 @@ function clickedButton(id)
 		$("#status").hide();
 		answered++;
 		points+=pointToAdd;
-		if(answered<30)
+		if(answered<noQuestions[gameId])
 		{
 			objectId=findNewId();
 			updateDOM(objectId);	
@@ -59,17 +59,25 @@ function clickedButton(id)
 		$("#correctAnswer").text("The correct answer was: "+stringcorrectAnswer+"). Click on the correct answer to continue.").show();
 	}
 }
+function spawnFinished()
+{
+	$("#cuprins").hide();
+	$("#gameContent").hide();
+	$("#finishedGame").show();
+	$("#correctAnswer").hide();
+}
 function updatePoints()
 {
 	$("#points").text("You have "+points+"/"+noQuestions[gameId]*2+" points");
 }
 function findNewId()
 {
-	var randomId=Math.floor(Math.random()*(noQuestions[gameId]-1));	
+	var randomId=Math.floor(Math.random()*(noQuestions[gameId]));	
 	while(objectAlreadyUsed[randomId]!=0)
-		randomId=Math.floor(Math.random()*(noQuestions[gameId]-1));
+		randomId=Math.floor(Math.random()*(noQuestions[gameId]));
 	objectAlreadyUsed[randomId]=1;
-	return parseInt(randomId)+1+suma[gameId];
+	console.log(suma[gameId]);
+	return parseInt(randomId)+suma[gameId-1];
 }
 function showQuestions()
 {

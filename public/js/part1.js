@@ -33,7 +33,7 @@ function clickedButton(id)
 		points+=pointToAdd;
 		if(pointToAdd==2)
 			spawnModal(id);
-		if(answered<30)
+		if(answered<noQuestions[gameId])
 		{
 			objectId=findNewId();
 			updateDOM(objectId);	
