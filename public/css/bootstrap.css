@@ -5101,13 +5101,17 @@ a.badge:hover {
   font-size: 20px !important;
   font-weight: bold!important;
 }
+.flag-part2 {
+  max-height: 300px;
+}
 #flag {
   max-width: 500px;
 }
 .links {
   word-wrap: break-word;
 }
-#goBack {
+#goBack,
+#showMovies {
   margin-top: 10px;
 }
 .highlight {

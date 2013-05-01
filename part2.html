@@ -52,10 +52,12 @@
             <br><br>
         </ul>
         <div id="gameContent">
-
-            <h3 id="points" >You have 0/30 points</h3>
-            <h1 id="slogan">Question time</h1>
-            <img src="" id="gameImg">
+            <div class="row-fluid">
+                <button class="btn btn-large btn btn-primary pull-left" onClick="showModal()" id="showMovies">Re-watch the movies!</button>
+                <h3 id="points" class="pull-right" >You have 0/30 points</h3>
+            </div>
+            
+            <img src="" id="gameImg" class="flag-part2">
             <h3 id="question"></h3>
             <div class="row-fluid">
                 <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(1)" id="btn0">Hello World</button></div>
@@ -63,6 +65,9 @@
                 <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(3)" id="btn2">Hello rld</button></div>
                 <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(4)" id="btn3">Hello World</button></div>
             </div>
+            <br><br>
+            
+            <br>
             <h3 id="status">Sorry, your answer was incorrect! The correct answer was highlited</h3>
             <h3 id="correctAnswer">adad</h3>
         </div>
@@ -79,6 +84,7 @@
             </div>
         </div>
         <button class="btn btn-large btn btn-primary" onClick="goBack()" id="goBack">Go back!</button>
+
     </div>
     <script src="public/js/jquery.js"></script>
     <script src="public/js/bootstrap.js"></script>

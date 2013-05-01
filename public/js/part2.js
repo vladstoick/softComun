@@ -1,8 +1,8 @@
 var gameId;
 var points=0;
 var videos=[0,10,10,10];
-var noQuestions = [ 0 , 18,  3, 10];
-var        suma = [ 0 , 20, 23, 33];
+var noQuestions = [ 0 , 20,  3, 10];
+var        suma = [ 0 , 0,0,0,0,0,0,,0,0,0,0,0,0];
 var countryName=["","Romania","Italy","Sweden"];
 var flag       =[0,3,2,6];
 var zone=0;
@@ -128,6 +128,8 @@ function showMainMenu()
 }
 $(document).ready(function(){
 	showMainMenu();
+	for(var i=1;i<=4;i++)
+		suma[i]=suma[i-1]+noQuestions[i];1
 	$("#cuprins button").click(
 		function()
 		{
