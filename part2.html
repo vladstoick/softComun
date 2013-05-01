@@ -51,7 +51,24 @@
             <li><button class="btn btn-large" onClick="showQuestions()">2. Test yourself now</button></li>
             <br><br>
         </ul>
+        <div id="gameContent">
 
+            <h3 id="points" >You have 0/30 points</h3>
+            <h1 id="slogan">Question time</h1>
+            <img src="" id="gameImg">
+            <h3 id="question"></h3>
+            <div class="row-fluid">
+                <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(1)" id="btn0">Hello World</button></div>
+                <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(2)" id="btn1">Hello World</button></div>
+                <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(3)" id="btn2">Hello rld</button></div>
+                <div class="span3"><button class="btn btn-large btn" onClick="clickedButton(4)" id="btn3">Hello World</button></div>
+            </div>
+            <h3 id="status">Sorry, your answer was incorrect! The correct answer was highlited</h3>
+            <h3 id="correctAnswer">adad</h3>
+        </div>
+        <div id="finishedGame">
+            <h1>You've finished this game</h1>
+        </div>
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -61,12 +78,12 @@
                 Hello World
             </div>
         </div>
-
+        <button class="btn btn-large btn btn-primary" onClick="goBack()" id="goBack">Go back!</button>
     </div>
-        <script src="public/js/jquery.js"></script>
-        <script src="public/js/bootstrap.js"></script>
-        <script src="public/js/array2.js"></script>
-        <script src="public/js/part2.js"></script>
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/array2.js"></script>
+    <script src="public/js/part2.js"></script>
 
-    </body>
-    </html>
+</body>
+</html>

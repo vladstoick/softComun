@@ -110,6 +110,7 @@ function spawn()
 	$("#correctAnswer").hide();
 	$("#goBack").show();
 	points=0;
+	answered=0;
 	updatePoints();
 	for(var i=0;i<100;i++)
 		objectAlreadyUsed[i]=0;
