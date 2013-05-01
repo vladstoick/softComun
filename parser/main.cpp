@@ -43,6 +43,18 @@ int main()
     for(int i=1;i<=lungime;i++)
     {
         in.getline(sir,2000);
+
+        for(int i=0;i<strlen(sir);i++)
+            if(sir[i]=='"')
+            {
+                int lun = strlen(sir);
+                for(int j=lun;j>=i+2;j--)
+                    sir[j]=sir[j-1];
+                sir[lun+1]=0;
+                sir[i]='\\';
+                sir[i+1]='"';
+                i++;
+            }
         switch(i%6)
         {
             case 1:strcpy(question[i/6+1],sir);break;
