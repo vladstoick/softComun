@@ -1,7 +1,7 @@
 var gameId;
 var points=0;
-var videos=[0,10,10,10,8];
-var noQuestions = [ 0 , 20,  3, 10 , 12 ] ;
+var videos=[0,10,10,10,8,10];
+var noQuestions = [ 0 , 20,  3, 10 , 12 , 14] ;
 var        suma = [ 0 , 0,0,0,0,0,0,,0,0,0,0,0,0];
 var countryName=["","Romania","Italy","Sweden","Poland"];
 var flag       =[0,3,2,6,5];
