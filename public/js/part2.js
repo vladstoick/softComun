@@ -1,10 +1,10 @@
 var gameId;
 var points=0;
-var videos=[0,10,10,10,8,10];
-var noQuestions = [ 0 , 20,  3, 10 , 12 , 14] ;
+var videos=[0,10,10,10,8,10,12,10];
+var noQuestions = [ 0 , 20,  3, 10 , 12 , 14,12,10] ;
 var        suma = [ 0 , 0,0,0,0,0,0,,0,0,0,0,0,0];
-var countryName=["","Romania","Italy","Sweden","Poland"];
-var flag       =[0,3,2,6,5,7];
+var countryName=["","Romania","Italy","Sweden","Poland","Turkey","Spain","Bulgaria"];
+var flag       =[0,3,2,6,5,7,4,1];
 var zone=0;
 var objectAlreadyUsed=new Array(100);
 var answered=0;
@@ -14,7 +14,7 @@ function showModal()
 	$("#countryName").text(countryName[gameId]);
 	$("#videoContainer").empty();
 	// for(var i=1;i<=videos[gameId];i++)
-	for(var i=1;i<=10;i++)
+	for(var i=1;i<=videos[gameId];i++)
 	{
 		var name = '/'+gameId+'/'+i;
 		$("#videoContainer").append(
@@ -102,10 +102,24 @@ function updateDOM()
 	pointToAdd=2;
 	$("#slogan").text(slogan);
 	$("#question").text(question[objectId]);
-	$("#btn0").text('a) '+varA[objectId]);
-	$("#btn1").text('b) '+varB[objectId]);
-	$("#btn2").text('b) '+varC[objectId]);
-	$("#btn3").text('d) '+varD[objectId]);
+
+	if(varD[objectId]=="empty")
+	{
+		$("#3q #btn0").text('a) '+varA[objectId]);
+		$("#3q #btn1").text('b) '+varB[objectId]);
+		$("#3q #btn2").text('b) '+varC[objectId]);
+		$("#3q").show();
+		$("#4q").hide();
+	}
+	else
+	{
+		$("#4q #btn0").text('a) '+varA[objectId]);
+		$("#4q #btn1").text('b) '+varB[objectId]);
+		$("#4q #btn2").text('b) '+varC[objectId]);
+		$("#4q #btn3").text('d) '+varD[objectId]).show();
+		$("#3q").hide();
+		$("#4q").show();
+	}
 	correctAnswer=answer[objectId];
 }
 function spawn(gameId)
@@ -128,7 +142,7 @@ function showMainMenu()
 }
 $(document).ready(function(){
 	showMainMenu();
-	for(var i=1;i<=4;i++)
+	for(var i=1;i<=6;i++)
 		suma[i]=suma[i-1]+noQuestions[i];1
 	$("#cuprins button").click(
 		function()
