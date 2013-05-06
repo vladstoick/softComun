@@ -13,7 +13,7 @@ var noQuestions=[0,
 30,
 30,
 ];
-var countryNames=["Bulgaria","Italy","Romania","Spian","Poland","Sweden","Turkey"];
+var countryNames=["Bulgaria","Italy","Romania","Spain","Poland","Sweden","Turkey"];
 var points=0;
 var pointToAdd=2;
 function spawnModal()
@@ -95,10 +95,10 @@ function updateDOM()
 	$("#gameImg").attr('src',source);
 	$("#slogan").text(slogan[gameId]);
 	$("#question").text(question[gameId][objectId]);
-	$("#btn0").text(varA[gameId][objectId]);
-	$("#btn1").text(varB[gameId][objectId]);
-	$("#btn2").text(varC[gameId][objectId]);
-	$("#btn3").text(varD[gameId][objectId]);
+	$("#btn0").text('a)'+varA[gameId][objectId]);
+	$("#btn1").text('b)'+varB[gameId][objectId]);
+	$("#btn2").text('c)'+varC[gameId][objectId]);
+	$("#btn3").text('d)'+varD[gameId][objectId]);
 	correctAnswer=answer[gameId][objectId];
 }
 function spawn()

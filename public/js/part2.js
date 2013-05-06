@@ -107,7 +107,7 @@ function updateDOM()
 	{
 		$("#3q #btn0").text('a) '+varA[objectId]);
 		$("#3q #btn1").text('b) '+varB[objectId]);
-		$("#3q #btn2").text('b) '+varC[objectId]);
+		$("#3q #btn2").text('c) '+varC[objectId]);
 		$("#3q").show();
 		$("#4q").hide();
 	}
@@ -115,7 +115,7 @@ function updateDOM()
 	{
 		$("#4q #btn0").text('a) '+varA[objectId]);
 		$("#4q #btn1").text('b) '+varB[objectId]);
-		$("#4q #btn2").text('b) '+varC[objectId]);
+		$("#4q #btn2").text('c) '+varC[objectId]);
 		$("#4q #btn3").text('d) '+varD[objectId]).show();
 		$("#3q").hide();
 		$("#4q").show();
